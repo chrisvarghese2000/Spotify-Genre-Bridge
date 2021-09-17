@@ -21,16 +21,16 @@ Spotify, Ching-Wei Chen, et al. “Recsys Challenge 2018: Automatic Music Playli
 ### Visualization of Data
 The MPD is divided into 1,000 json files that each contain 1,000 playlists. In order to simply showcase and visualize the graph and search algorithms, 1,000 playlists is an adequate and managable sample. Since the graph and search algorithms are easily scalable in this implementation, utilizing 1,000,000 playlists will be simple to implement later. Additionally, these 1,000 playlists contain 29,005 unique tracks.
 
-![distribution](pics/song_dist)
+![distribution](pics/song_dist.png)
 
 This visual shows the distribution for the frequencies of songs as they appear in the 1,000 playlists. The vast majority of songs only appear a single time in this data set. Alternatively, this distribution is heavily skewed to the right as there are even a minute amount of songs appearing more than 50 times. This means that the playlists are very connected, but they still contain enough sparse songs to provide new and valuable reccomendations with.
 
-![ss](pics/data ss)
+![ss](pics/Screen Shot 2021-09-17 at 11.23.48 AM.png)
 
 ### Modelling Process
 Above is the json structure for the first five playlists in the data set. I will be representing the graph using an adjency list. This will be a dictionary where a key is a track and the value is a list of tuples containing connected songs and their corrosponding edge weights. An in depth explanation of graph representation and specifically adjency lists can be found here. https://www.geeksforgeeks.org/graph-and-its-representations/
 
-![graph](pics/graph)
+![graph](pics/graph.png)
 
 This is a visual representation of the graph structure. Of course, this is only a small sample of songs and it is already very cluttered since each song has an edge with every song that it is in a playlist with.
 
